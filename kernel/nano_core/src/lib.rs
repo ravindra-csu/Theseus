@@ -92,7 +92,7 @@ fn shutdown(msg: core::fmt::Arguments) -> ! {
 /// 
 #[no_mangle]
 pub extern "C" fn nano_core_start(multiboot_information_virtual_address: usize) {
-    println_raw!("Entered nano_core_start()."); 
+    println_raw!("Entered nano_core_start() - Ravindra Code change."); 
 	
 	// start the kernel with interrupts disabled
 	irq_safety::disable_interrupts();
