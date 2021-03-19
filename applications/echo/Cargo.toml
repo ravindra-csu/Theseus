@@ -1,0 +1,16 @@
+[package]
+name = "echo"
+version = "0.1.0"
+description = "An echo application that just prints its arguments. Just like the echo in all linux based OS."
+authors = ["Ravindra Senapathi <rsenapathi@csustudent.net>"]
+build = "../../build.rs"
+
+[dependencies]
+getopts = "0.2.21"
+
+[dependencies.log]
+version = "0.4.8"
+
+
+[dependencies.terminal_print]
+path = "../../kernel/terminal_print"
