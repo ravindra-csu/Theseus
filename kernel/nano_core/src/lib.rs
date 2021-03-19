@@ -91,18 +91,13 @@ fn shutdown(msg: core::fmt::Arguments) -> ! {
 /// then change the [`captain::init`](../captain/fn.init.html) routine.
 /// 
 #[no_mangle]
-<<<<<<< HEAD
-pub extern "C" fn nano_core_start(multiboot_information_virtual_address: usize) {
-    println_raw!("Entered nano_core_start() - Ravindra Code change."); 
-=======
 pub extern "C" fn nano_core_start(
     multiboot_information_virtual_address: usize,
     early_double_fault_stack_top: usize,
 ) {
-    println_raw!("Entered nano_core_start()."); 
->>>>>>> c192cd945b981e5ffce6697f7a9f23ab54e359cb
-	
-	// start the kernel with interrupts disabled
+    println_raw!("Entered nano_core_start() - Ravindra Code change."); 
+
+    // start the kernel with interrupts disabled
 	irq_safety::disable_interrupts();
 
     // first, bring up the logger so we can debug
